@@ -1,9 +1,34 @@
 <?php $__env->startSection('content'); ?>
 <div class="container">
+
+    
+
     <div class="row justify-content-center">
         <div class="col-md-8">
+
+            
+                <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-2">
+                                    <img src="<?php echo e(asset('img/svg/login.svg')); ?>" alt="Login icon" class="img-fluid">
+                                </div>
+                                <div class="col-sm-12 col-md-10">
+        
+                                    <h2>Reset password</h2>
+                                    <p>
+                                        Reset your company account in case of a lost password. <br>
+                                        <a href="<?php echo e(url('/login')); ?>">Return to login</a>
+                                    </p>
+        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
             <div class="card">
-                <div class="card-header"><?php echo e(__('Reset Password')); ?></div>
 
                 <div class="card-body">
                     <?php if(session('status')): ?>
@@ -45,5 +70,11 @@
     </div>
 </div>
 <?php $__env->stopSection(); ?>
-
-<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<style>
+    
+        body  {
+            background-image: url(<?php echo e(asset("img/login-bg.png")); ?>) !important;
+        }
+        
+        </style>
+<?php echo $__env->make('layouts.app-small', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>
