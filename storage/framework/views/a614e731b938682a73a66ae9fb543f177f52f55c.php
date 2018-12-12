@@ -1,3 +1,5 @@
+<?php $__env->startSection('title', 'Reset Password'); ?>
+
 <?php $__env->startSection('content'); ?>
 <div class="container">
 

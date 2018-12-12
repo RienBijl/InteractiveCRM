@@ -36,6 +36,18 @@
                         </div>
                     </div>
                 </div>
+
+            {{-- Jump to tool --}}
+                <br>
+
+            <div class="card">
+                <div class="card-header">Jump to tool</div>
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('tools/statitician') }}"><i class="fas fa-signal"></i> Statistician</a>
+                    </li>
+                </ul>
+            </div>
     
         </div>
 

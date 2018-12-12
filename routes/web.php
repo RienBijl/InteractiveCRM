@@ -22,7 +22,7 @@ Auth routes
 Auth::routes(["register" => false]);
 Route::middleware(['auth'])->group(function () {
     Route::get('/home', "DashboardController@home");
-    
+    Route::resource('/client', 'ClientController'); 
 });
     
 /*

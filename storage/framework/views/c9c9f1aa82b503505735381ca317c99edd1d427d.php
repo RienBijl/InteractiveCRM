@@ -38,7 +38,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        <?php if(auth()->guard()->check()): ?>
+                        <a class="nav-link" href="<?php echo e(url('home')); ?>"><i class="fas fa-home"></i></a>
+                        <a class="nav-link" href="<?php echo e(url('client')); ?>"><i class="fas fa-users"></i> Clients</a>
+                        <?php endif; ?>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

@@ -37,7 +37,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        @auth
+                        <a class="nav-link" href="{{ url('home') }}"><i class="fas fa-home"></i></a>
+                        <a class="nav-link" href="{{ url('client') }}"><i class="fas fa-users"></i> Clients</a>
+                        @endauth
                     </ul>
 
                     <!-- Right Side Of Navbar -->
