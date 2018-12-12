@@ -74,6 +74,6 @@
         </main>
     </div>
 
-<div class="container"><small><a href="https://rhbict.eu" class="text-muted">&copy; iCRM by RHBict {{ date('Y') }}</a></small></div>
+<div class="container"><small><a href="https://rhbict.eu" class="text-muted"g>&copy; iCRM by RHBict {{ date('Y') }}</a></small></div>
 </body>
 </html>
