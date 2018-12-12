@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
 
-    <title><?php echo e(env('APP_NAME')); ?></title>
+    <title><?php echo e(env('APP_NAME')); ?> - <?php echo $__env->yieldContent('title'); ?></title>
 
     <!-- Scripts -->
     <script src="<?php echo e(asset('js/app.js')); ?>" defer></script>
