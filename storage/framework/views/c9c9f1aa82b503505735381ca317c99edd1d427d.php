@@ -15,6 +15,10 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+
+    <!-- Script -->
+    
 
     <!-- Styles -->
     <link href="<?php echo e(asset('css/app.css')); ?>" rel="stylesheet">
@@ -59,6 +63,7 @@
 
                                     </a>
 
+
                                     <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" style="display: none;">
                                         <?php echo csrf_field(); ?>
                                     </form>
@@ -76,6 +81,19 @@
         </main>
     </div>
 
-<div class="container"><small><a href="https://rhbict.eu" class="text-muted">&copy; iCRM by RHBict <?php echo e(date('Y')); ?></a></small></div>
+<div class="container">
+
+    <div class="card">
+        <div class="card-body">
+            <small>
+                <a href="https://rhbict.eu" class="text-muted"g>&copy; iCRM by RHBict <?php echo e(date('Y')); ?>.</a>
+                <a class="text-muted" href="https://github.com/RienBijl/InteractiveCRM">Created with a whole lot of <i class="fas fa-heart"></i></a> <hr>
+                <a class="text-muted" href="<?php echo e(url('/report-a-malfunction')); ?>">Report a malfunction.</a>
+                <a class="text-muted" href="https://github.com/RienBijl/InteractiveCRM/pulls">Work to improve.</a>
+            </small>
+        </div>
+    </div>
+
+</div>
 </body>
 </html>

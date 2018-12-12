@@ -16,3 +16,8 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+
+/*
+Info cards
+*/
+Route::get('/report-a-malfunction', function() { return view("infocard.malfunction"); });
