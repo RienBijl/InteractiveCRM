@@ -37,7 +37,7 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        die("no access");
+        return abort(403); exit; // Stop all code execution if this is reached!
         $this->middleware('guest');
     }
 

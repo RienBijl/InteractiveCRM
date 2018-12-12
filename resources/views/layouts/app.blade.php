@@ -85,7 +85,7 @@
         <div class="card-body">
             <small>
                 <a href="https://rhbict.eu" class="text-muted"g>&copy; iCRM by RHBict {{ date('Y') }}.</a>
-                <a class="text-muted" href="https://github.com/RienBijl/InteractiveCRM">Created with a whole lot of <i class="fas fa-heart"></i></a> <hr>
+                <a class="text-muted" href="https://github.com/RienBijl/InteractiveCRM">Created with a whole lot of <i class="fas fa-heart"></i></a>.<hr>
                 <a class="text-muted" href="{{ url('/report-a-malfunction') }}">Report a malfunction.</a>
                 <a class="text-muted" href="https://github.com/RienBijl/InteractiveCRM/pulls">Work to improve.</a>
             </small>
