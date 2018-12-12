@@ -1,33 +1,12 @@
-@extends('layouts.app-small')
+@extends('layouts.app')
 @section("title", "Login")
 
 @section('content')
-
-
-
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-
             <div class="card">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-sm-12 col-md-2">
-                            <img src="{{ asset('img/svg/login.svg') }}" alt="Login icon" class="img-fluid">
-                        </div>
-                        <div class="col-sm-12 col-md-10">
-
-                            <h2>Login</h2>
-                            <p>Please authenticate yourself using your company credentials.</p>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <br>
-
-            <div class="card">
+                <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
@@ -92,13 +71,4 @@
         </div>
     </div>
 </div>
-
 @endsection
-
-<style>
-    
-        body  {
-            background-image: url({{ asset("img/login-bg.png") }}) !important;
-        }
-        
-        </style>

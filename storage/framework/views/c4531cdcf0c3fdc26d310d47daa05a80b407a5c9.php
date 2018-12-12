@@ -1,11 +1,32 @@
 <?php $__env->startSection("title", "Login"); ?>
 
 <?php $__env->startSection('content'); ?>
+
+
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+
             <div class="card">
-                <div class="card-header"><?php echo e(__('Login')); ?></div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-2">
+                            <img src="<?php echo e(asset('img/svg/login.svg')); ?>" alt="Login icon" class="img-fluid">
+                        </div>
+                        <div class="col-sm-12 col-md-10">
+
+                            <h2>Login</h2>
+                            <p>Please authenticate yourself using your company credentials.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="card">
 
                 <div class="card-body">
                     <form method="POST" action="<?php echo e(route('login')); ?>">
@@ -73,6 +94,14 @@
         </div>
     </div>
 </div>
+
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<style>
+    
+        body  {
+            background-image: url(<?php echo e(asset("img/login-bg.png")); ?>) !important;
+        }
+        
+        </style>
+<?php echo $__env->make('layouts.app-small', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>

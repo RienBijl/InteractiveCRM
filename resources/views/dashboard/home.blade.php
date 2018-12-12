@@ -40,6 +40,7 @@
         </div>
 
         <div class="col-sm-12 col-md-8">
+            {{-- Activity feed --}}
             <div class="card">
                 <div class="card-header">Activities</div>
                 <div class="card-body">
