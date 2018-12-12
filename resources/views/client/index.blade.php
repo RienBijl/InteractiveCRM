@@ -1,10 +1,10 @@
 @extends('layouts.app')
-@section("title", "Company")
+@section("title", "Clients")
 
 @section('content')
 <div class="container">
     <h1>Clients</h1>
-    <a href="{{ url('client/create') }}" class="btn btn-primary"><i class="fas fa-plus-square"></i> New client</a>
+    <a href="{{ url('client/create') }}" class="btn btn-secondary"><i class="fas fa-plus"></i> New client</a>
     <hr>
 
             {{-- Search for client --}}

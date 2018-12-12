@@ -80,6 +80,22 @@
         </nav>
 
         <main class="py-4">
+
+                <?php if($errors->any()): ?>
+                <div class="container">
+                        <div class="alert alert-danger" onclick="$(this).slideUp()" style="cursor: pointer">
+                            <b>Oops, something went terribly wrong!</b> <hr>
+                                <ul>
+                                    <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                        <li><?php echo e($error); ?></li>
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                </ul>
+                                <hr>
+                                Please resolve these issues and try again. Click to dismiss.
+                            </div>
+                </div>
+            <?php endif; ?>
+
             <?php echo $__env->yieldContent('content'); ?>
         </main>
     </div>

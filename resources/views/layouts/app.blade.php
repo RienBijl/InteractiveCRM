@@ -78,6 +78,22 @@
         </nav>
 
         <main class="py-4">
+
+                @if ($errors->any())
+                <div class="container">
+                        <div class="alert alert-danger" onclick="$(this).slideUp()" style="cursor: pointer">
+                            <b>Oops, something went terribly wrong!</b> <hr>
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                                <hr>
+                                Please resolve these issues and try again. Click to dismiss.
+                            </div>
+                </div>
+            @endif
+
             @yield('content')
         </main>
     </div>
