@@ -22,6 +22,7 @@
 
     <!-- Styles -->
     <link href="<?php echo e(asset('css/app.css')); ?>" rel="stylesheet">
+    <link href="<?php echo e(asset('css/pub.css')); ?>" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -40,7 +41,8 @@
                     <ul class="navbar-nav mr-auto">
                         <?php if(auth()->guard()->check()): ?>
                         <a class="nav-link" href="<?php echo e(url('home')); ?>"><i class="fas fa-home"></i></a>
-                        <a class="nav-link" href="<?php echo e(url('client')); ?>"><i class="fas fa-users"></i> Clients</a>
+                        <a class="nav-link" href="<?php echo e(url('client')); ?>"><i class="fas fa-users"></i> Clients <span class="badge badge-pill badge-secondary"><?php echo e(App\Client::count()); ?></span></a>
+                            <a class="nav-link" href="<?php echo e(url('client')); ?>"><i class="fas fa-tasks"></i> Tasks <span class="badge badge-pill badge-secondary"><i class="fas fa-pause"></i> 53</span> <span class="badge badge-pill badge-secondary"><i class="fas fa-arrow-right"></i> 20</span></a>
                         <?php endif; ?>
                     </ul>
 
@@ -80,6 +82,12 @@
         </nav>
 
         <main class="py-4">
+
+            <noscript>
+                <div class="container">
+                    <div class="alert alert-danger">We rely heavily on javascript, your browser does unfortunately not seem to support it. Please contact your systems administrator.</div>
+                </div>
+            </noscript>
 
                 <?php if($errors->any()): ?>
                 <div class="container">

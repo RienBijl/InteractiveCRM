@@ -13,12 +13,14 @@
                     Search for client
                 </div>
                 <div class="card-body">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Client">
+                    <form id="search-client" action="{{url('/client')}}" method="get">
+                        <div class="input-group mb-3">
+                            <input type="text" name="query" class="form-control" placeholder="Client">
                             <div class="input-group-append">
-                                <button class="btn btn-primary" type="button"><i class="fas fa-search"></i></button>
+                                <button onclick="$('#search-client').submit()" class="btn btn-primary" type="button"><i class="fas fa-search"></i></button>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
             <hr>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Client;
+use Illuminate\Support\Facades\DB;
 
 class ClientController extends Controller
 {
@@ -12,9 +13,27 @@ class ClientController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view("client.index");
+        if($request->input('query') != null)
+        {
+            $q = urldecode($request->input('query'));
+            $results = DB::table('clients')
+            ->where('id', 'like', '%' .$q .'%')
+            ->orWhere('name', 'like', '%' .$q .'%')
+            ->orWhere('mail', 'like', '%' .$q .'%')
+            ->orWhere('cityandzipcode', 'like', '%' .$q .'%')
+            ->orWhere('name', 'like', '%' .$q .'%')
+            ->orWhere('state', 'like', '%' .$q .'%')
+            ->orWhere('country', 'like', '%' .$q .'%')->paginate(15);
+
+            return view("client.index", compact("results"));
+        } else {
+            $results = 0;
+            return view("client.index", compact("results"));
+        }
+
+
     }
 
     /**
@@ -41,16 +60,14 @@ class ClientController extends Controller
             'streetandhousenumber' => 'required',
             'cityandzipcode' => 'required',
             'state' => 'required',
-            'country' => 'required',
-            'description' => 'required',
-            'administrative' => 'required'
+            'country' => 'required'
         ]);
 
         $client = new Client;
         $client->name = $request->name;
         $client->mail = $request->mail;
         $client->streetandhousenumber = $request->streetandhousenumber;
-        $client->cityanzipcode = $request->cityandzipcode;
+        $client->cityandzipcode = $request->cityandzipcode;
         $client->state = $request->state;
         $client->country = $request->country;
         $client->description = $request->description;

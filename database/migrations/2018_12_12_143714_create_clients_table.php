@@ -19,11 +19,11 @@ class CreateClientsTable extends Migration
             $table->text("name");
             $table->text("mail");
             $table->text("streetandhousenumber");
-            $table->text("cityanzipcode");
+            $table->text("cityandzipcode");
             $table->text("state");
             $table->text("country");
-            $table->longtext("description");
-            $table->longtext("administrative");
+            $table->longtext("description")->nullable();
+            $table->longtext("administrative")->nullable();
         });
     }
 

@@ -22,6 +22,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/pub.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -39,7 +40,8 @@
                     <ul class="navbar-nav mr-auto">
                         @auth
                         <a class="nav-link" href="{{ url('home') }}"><i class="fas fa-home"></i></a>
-                        <a class="nav-link" href="{{ url('client') }}"><i class="fas fa-users"></i> Clients</a>
+                        <a class="nav-link" href="{{ url('client') }}"><i class="fas fa-users"></i> Clients <span class="badge badge-pill badge-secondary">{{App\Client::count()}}</span></a>
+                            <a class="nav-link" href="{{ url('client') }}"><i class="fas fa-tasks"></i> Tasks <span class="badge badge-pill badge-secondary"><i class="fas fa-pause"></i> 53</span> <span class="badge badge-pill badge-secondary"><i class="fas fa-arrow-right"></i> 20</span></a>
                         @endauth
                     </ul>
 
@@ -78,6 +80,12 @@
         </nav>
 
         <main class="py-4">
+
+            <noscript>
+                <div class="container">
+                    <div class="alert alert-danger">We rely heavily on javascript, your browser does unfortunately not seem to support it. Please contact your systems administrator.</div>
+                </div>
+            </noscript>
 
                 @if ($errors->any())
                 <div class="container">
