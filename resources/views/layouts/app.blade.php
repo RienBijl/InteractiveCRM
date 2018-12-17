@@ -41,7 +41,7 @@
                         @auth
                         <a class="nav-link" href="{{ url('home') }}"><i class="fas fa-home"></i></a>
                         <a class="nav-link" href="{{ url('client') }}"><i class="fas fa-users"></i> Clients <span class="badge badge-pill badge-secondary">{{App\Client::count()}}</span></a>
-                            <a class="nav-link" href="{{ url('client') }}"><i class="fas fa-tasks"></i> Tasks <span class="badge badge-pill badge-danger"><i class="fas fa-arrow-right"></i> Uncompletedgi</span></a>
+                            <a class="nav-link" href="{{ url('client') }}"><i class="fas fa-tasks"></i> Tasks <span class="badge badge-pill badge-danger"><i class="fas fa-arrow-right"></i> Uncompleted</span></a>
                         @endauth
                     </ul>
 
