@@ -42,7 +42,7 @@
                         <?php if(auth()->guard()->check()): ?>
                         <a class="nav-link" href="<?php echo e(url('home')); ?>"><i class="fas fa-home"></i></a>
                         <a class="nav-link" href="<?php echo e(url('client')); ?>"><i class="fas fa-users"></i> Clients <span class="badge badge-pill badge-secondary"><?php echo e(App\Client::count()); ?></span></a>
-                            <a class="nav-link" href="<?php echo e(url('client')); ?>"><i class="fas fa-tasks"></i> Tasks <span class="badge badge-pill badge-secondary"><i class="fas fa-pause"></i> 53</span> <span class="badge badge-pill badge-danger"><i class="fas fa-arrow-right"></i> 20</span></a>
+                            <a class="nav-link" href="<?php echo e(url('client')); ?>"><i class="fas fa-tasks"></i> Tasks <span class="badge badge-pill badge-danger"><i class="fas fa-arrow-right"></i> Uncompleted</span></a>
                         <?php endif; ?>
                     </ul>
 
